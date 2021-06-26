@@ -10,14 +10,17 @@
   ],
   "contact": {
     "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "sources": "https://github.com/FabricMC/fabric-example-mod",
+    "issues": "https://github.com/PineyPiney/PLP/issues"
   },
-
-  "license": "CC0-1.0",
+  "license": "MIT",
   "icon": "assets/plp/logo.png",
 
   "environment": "*",
   "entrypoints": {
+    "main": [
+      "com.pineypiney.plp.PLP"
+    ]
   },
   "mixins": [
     "plp.mixins.json"
