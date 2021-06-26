@@ -14,13 +14,6 @@ public class ModCommands {
 
     public static void registerCommands(){
 
-        CommandRegistrationCallback.EVENT.register((dispatcher, dedicated) -> dispatcher.register(literal("foo")
-            .executes(context -> {
-                System.out.println("Foo");
-                return 0;
-            })
-        ));
-
         // /Paper Command
         CommandRegistrationCallback.EVENT.register(((dispatcher, dedicated) -> dispatcher.register(literal("paper")
             .then(literal("passive")
@@ -42,14 +35,11 @@ public class ModCommands {
                 })
             )
         )));
-
-        System.out.println("Registered Mod Commands");
     }
 
     public static void placePaper(CommandContext<ServerCommandSource> context, String name) throws CommandSyntaxException {
         ItemStack paperStack = new ItemStack(Items.PAPER, 1);
         paperStack.setCustomName(Text.of(name));
-        System.out.println("Stack is " + paperStack + " for player " + context.getSource().getPlayer());
         context.getSource().getPlayer().giveItemStack(paperStack);
     }
 }
