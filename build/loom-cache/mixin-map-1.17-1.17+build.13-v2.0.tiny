@@ -1,3 +1,0 @@
-v1	named	intermediary
-FIELD	com/pineypiney/plp/mixins/ZombieAttackMixin	Lnet/minecraft/entity/mob/ZombieEntity;	zombie	field_6628
-METHOD	com/pineypiney/plp/mixins/ZombieAttackMixin	()V	stop	method_6270

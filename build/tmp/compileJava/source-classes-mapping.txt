@@ -1,4 +1,0 @@
-com/pineypiney/plp/mixins/ZombieAttackMixin.java
- com.pineypiney.plp.mixins.ZombieAttackMixin
-com/pineypiney/plp/mixins/ZombieRendererMixin.java
- com.pineypiney.plp.mixins.ZombieRendererMixin
