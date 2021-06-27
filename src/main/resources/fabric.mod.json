@@ -18,9 +18,6 @@
 
   "environment": "*",
   "entrypoints": {
-    "main": [
-      "com.pineypiney.plp.PLP"
-    ]
   },
   "mixins": [
     "plp.mixins.json"
