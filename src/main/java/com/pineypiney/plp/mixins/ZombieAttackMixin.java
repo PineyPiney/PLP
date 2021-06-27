@@ -1,15 +1,11 @@
 package com.pineypiney.plp.mixins;
 
-import com.pineypiney.plp.registry.ModSounds;
 import net.minecraft.entity.ai.goal.MeleeAttackGoal;
 import net.minecraft.entity.ai.goal.ZombieAttackGoal;
 import net.minecraft.entity.mob.PathAwareEntity;
 import net.minecraft.entity.mob.ZombieEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
-import net.minecraft.sound.SoundCategory;
-import net.minecraft.sound.SoundEvents;
-import net.minecraft.util.math.BlockPos;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
@@ -36,7 +32,6 @@ public abstract class ZombieAttackMixin extends MeleeAttackGoal {
     @Inject(at = @At("HEAD"), method = "tick", cancellable = true)
     public void tick(CallbackInfo ci){
         if(holdingThePeace(zombie)){
-            playMusic();
             stop();
             ci.cancel();
         }
@@ -54,9 +49,5 @@ public abstract class ZombieAttackMixin extends MeleeAttackGoal {
             }
         }
         return false;
-    }
-
-    private void playMusic(){
-        zombie.world.playSound(null, zombie.getBlockPos(), ModSounds.NANI_EVENT, SoundCategory.MASTER, 5, 1);
     }
 }
